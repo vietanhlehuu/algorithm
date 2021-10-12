@@ -1,4 +1,4 @@
-export const getMaxProfit = (stockPrices: number[]): number | Error => {
+export const getMaxProfit = (stockPrices: number[]): number => {
   if (stockPrices.length == 0 || stockPrices.length == 1) {
     throw new Error("Stock prices should have more value");
   }
