@@ -31,24 +31,20 @@ export function changePossibilities(
   return numberOfWays;
 }
 
+// using loop
 export function changePossibilitiesBottomUp(
   amount: number,
   denominations: number[]
 ): number {
-  let numberOfWaysForCentN: { [k: number]: number } = {};
-  for (let centN = 0; centN <= amount; centN++) {
-    numberOfWaysForCentN[centN] = 0;
-    if (centN === 0) {
-      numberOfWaysForCentN[centN] = 1;
-    } else {
-      for (let index = 0; index < denominations.length; index++) {
-        const deno = denominations[index];
-        const change = centN - deno;
-        if (change >= 0) {
-          numberOfWaysForCentN[centN] += numberOfWaysForCentN[change];
-        }
-      }
+  let numberOfWaysForCentN = new Array(amount + 1).fill(0);
+  numberOfWaysForCentN[0] = 1;
+
+  for (const coin of denominations) {
+    for (let cent = coin; cent <= amount; cent++) {
+      const remainder = cent - coin;
+      numberOfWaysForCentN[cent] += numberOfWaysForCentN[remainder];
     }
   }
+  //
   return numberOfWaysForCentN[amount];
 }
