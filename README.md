@@ -13,3 +13,9 @@
 6/ Think about using hash table, stack, queue
 
 7/ Think about binary search
+
+8/ Triangular Series
+
+```js
+1 + 2 + 3 + ... + (n − 2) + (n − 1) + n = (n^2 + n) / 2
+```
