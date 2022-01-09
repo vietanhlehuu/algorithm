@@ -39,8 +39,6 @@ describe("Question 7", () => {
   test("Test 7.5", () => {
     const result = findAllSum(6);
 
-    console.log(result);
-
     actual = result.length;
     expeceted = 10;
     expect(actual).toBe(expeceted);
