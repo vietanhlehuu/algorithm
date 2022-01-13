@@ -11,6 +11,10 @@
   },
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "create-question": "zx ./create.mjs"
+  },
+  "dependencies": {
+    "zx": "^4.2.0"
   }
 }
