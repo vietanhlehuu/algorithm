@@ -1,4 +1,4 @@
-export function coinChangeTopDown(coins: number[], amount: number): number {
+export function coinChangeBottomUp(coins: number[], amount: number): number {
   const result = new Array(amount + 1).fill(Infinity);
   result[0] = 0;
 
