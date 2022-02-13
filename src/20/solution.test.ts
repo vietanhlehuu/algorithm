@@ -28,4 +28,11 @@ describe("Question 20", () => {
 
     expect(actual).toBe(expected);
   });
+
+  test("Test 20.5", () => {
+    const actual = findPermutation("aaaca", "abc");
+    const expected = false;
+
+    expect(actual).toBe(expected);
+  });
 });
