@@ -1,6 +1,8 @@
 #!/usr/bin/env zx
 
-let questionNo = await question("What question do you want to make? ");
+// let questionNo = await question("What question do you want to make? ");
+const countOutput = await $`ls -ld src/* | wc -l`;
+const questionNo = Number(countOutput.stdout.trim()) + 1;
 await $`mkdir src/${questionNo}`;
 cd(`src/${questionNo}`);
 await $`touch question.md`;
@@ -17,6 +19,6 @@ describe("Question ${questionNo}", () => {
   });
 });
 
-`;
+// `;
 
-await $`echo ${testContent} > solution.test.ts`;
+// await $`echo ${testContent} > solution.test.ts`;
