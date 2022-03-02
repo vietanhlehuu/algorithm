@@ -1,6 +1,5 @@
 #!/usr/bin/env zx
 
-// let questionNo = await question("What question do you want to make? ");
 const countOutput = await $`ls -ld src/* | wc -l`;
 const questionNo = Number(countOutput.stdout.trim()) + 1;
 await $`mkdir src/${questionNo}`;
@@ -21,4 +20,4 @@ describe("Question ${questionNo}", () => {
 
 // `;
 
-// await $`echo ${testContent} > solution.test.ts`;
+await $`echo ${testContent} > solution.test.ts`;
