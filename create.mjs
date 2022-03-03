@@ -16,8 +16,6 @@ describe("Question ${questionNo}", () => {
 
     expect(actual).toBe(expected);
   });
-});
-
-// `;
+});`;
 
 await $`echo ${testContent} > solution.test.ts`;
