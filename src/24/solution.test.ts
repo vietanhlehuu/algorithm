@@ -1,4 +1,4 @@
-import { sortColors } from "./solution";
+import { sortColors, sortColors2 } from "./solution";
 
 describe("Question 24", () => {
   test("Test 24.1", () => {
@@ -7,6 +7,9 @@ describe("Question 24", () => {
     const expected = [0, 0, 1, 1, 2, 2];
 
     expect(arr).toEqual(expected);
+
+    sortColors2(arr);
+    expect(arr).toEqual(expected);
   });
 
   test("Test 24.2", () => {
@@ -14,6 +17,9 @@ describe("Question 24", () => {
     sortColors(arr);
     const expected = [0, 1, 2];
 
+    expect(arr).toEqual(expected);
+
+    sortColors2(arr);
     expect(arr).toEqual(expected);
   });
 });
